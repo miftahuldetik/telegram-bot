@@ -344,5 +344,7 @@ def main():
     updater.idle()
 
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    from keep_alive import keep_alive  # If using a web server
+    keep_alive()  
+    bot.polling()
