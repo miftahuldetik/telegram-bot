@@ -293,9 +293,8 @@ def main():
     dp.add_handler(conv_handler)
 
     # Untuk menjaga bot tetap polling di Google Colab, gunakan loop
-    while True:
-        updater.start_polling(timeout=10, clean=True)
-        time.sleep(10)
+    updater.start_polling()
+    updater.idle()
 
 if __name__ == '__main__':
     main()
